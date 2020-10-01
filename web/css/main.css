@@ -1,0 +1,366 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 Jun. 2020, 9:02:30 pm
+    Author     : Michelle Tanoto
+*/
+
+
+/*BUTTON*/
+
+/*Example of usage: <a class="btn" href="./admin_home.jsp">Cancel</a>
+class = "btn" : white button
+class = "btn btn-blue" : blue button*/
+
+a { text-decoration: none; margin: 0 10px; }
+
+a.btn {
+	display: inline-block;
+	color: #666;
+	background-color: #eee;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 12px;
+	padding: 10px 30px;
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-bottom-width: 3px;
+        font-family: sans-serif;
+        font: arial;
+}
+
+a.btn:hover {
+	background-color: #e3e3e3;
+	border-color: rgba(0,0,0,0.5);
+}
+a.btn.btn-blue {
+	background-color: #699DB6;
+	border-color: rgba(0,0,0,0.3);
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	color: #FFF;
+}
+a.btn.btn-blue:hover {
+        background-color: #4F87A2;
+	border-color: rgba(0,0,0,0.5);
+}
+
+/*Example of usage:  <input type="submit" value="Update" class="btn btn-blue">
+class = "btn" : white button
+class = "btn btn-blue" : blue button*/
+
+input { text-decoration: none; margin: 0 10px; }
+
+input.btn {
+	display: inline-block;
+	color: #666;
+	background-color: #eee;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 12px;
+	padding: 10px 30px;
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-bottom-width: 3px;
+        font-family: sans-serif;
+        font: arial;
+}
+input.btn:hover {
+	background-color: #e3e3e3;
+	border-color: rgba(0,0,0,0.5);
+}
+input.btn.btn-blue {
+	background-color: #699DB6;
+	border-color: rgba(0,0,0,0.3);
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	color: #FFF;
+}
+input.btn.btn-blue:hover {
+        background-color: #4F87A2;
+	border-color: rgba(0,0,0,0.5);
+}
+
+/*TABLE*/
+
+/*Example of usage:
+<table style="width: 100%" class="fl-table">
+             <thead>
+                <tr>
+                    <th><b>First Name</b></td>
+                    <th><b>Last Name</b></td>
+                </tr>
+             </thead>
+             <tr>
+                 <td><p><%=searchStaff.getStaffFName()%></p></td>
+                 <td><p><%=searchStaff.getStaffLName()%></p></td>   
+             </tr>
+ </table>*/
+
+.table-wrapper{
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* To Make it Responsive */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+
+/*FORM*/
+/*Example of Usage: 
+ <div class="main-component">
+          <div class="dashboard-form-container with-bg has-subheading">
+              <h1 class="form-title">Admin Login</h1>
+              <form action = "LoginServlet" method="post">
+                 (Something)
+              </form>
+          </div>
+</div>*/
+  
+  .main-component{
+    font-size: 16px;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    min-width: 540px;
+    padding-left: 10px;
+    background-image: url("background.jpg");
+    position: absolute;
+    background-size: 100% 100%
+}
+
+.main-component.dashboard-form-container {
+    display: none;
+    left: 50%;
+    margin-left: -400px;
+    position: absolute;
+    top: 50%;
+    width: 800px;
+    box-sizing: border-box;
+}
+
+.dashboard-form-container {
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    width: 260px;
+    z-index: 5;
+}
+
+.dashboard-form-container.with-bg {
+    padding: 20px 30px 30px;
+}
+
+.dashboard-form-container.has-subheading {
+    margin-top: -241px;
+}
+
+/*THE TITLE OF A FORM*/
+.form-title{
+      font-family: sans-serif;
+      font: arial;
+      text-align: center;
+}
+
+/*FONT*/
+/*Example of Usage:
+<p class="subtitle">Hello</p>*/
+
+.font{
+    font-family: sans-serif;
+    font: arial;
+ }
+
+/* TEXT THEME*/
+/* PLEASE OVERRIDE THE SIZE IF YOU DON'T WANT THE SIZE THAT I SET
+ Example of Usage:
+ <p class="title">Hello</p>*/
+
+.title{
+    font-family: sans-serif;
+    font: arial;
+    font-size: 20px;
+}
+
+.subtitle{
+    font-family: sans-serif;
+    font: arial;
+    font-size: 15px;
+}
+
+/*DISPLAY FEEDBACK*/
+.warning{
+    font-family: sans-serif;
+    font: arial;
+    font-size: 15px;
+    font-style: italic;
+}
+
+/*BACKGROUND*/
+
+/*Example of Usage:
+ <body>
+    <div class="main-component">
+    <p class="subtitle">You have logged out. Click <a href="./admin_login.jsp">here</a> to go to home page.</p>
+    </div>
+ </body>*/
+
+.background{
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    min-width: 540px;
+    padding-left: 10px;
+    background-image: url("background.jpg");
+    position: absolute;
+    background-size: 100% 100%
+}
+
+/*SEARCH BAR*/
+/*Example of usage:       
+<div class="search">
+      <form action="SearchServlet" method="post">
+      <input class="searchTerm" name="search_username" type="text" type="submit" placeholder="Search staff by username">
+      <input class="searchTerm" name="search_position" type="text" type="submit" placeholder="Search staff by position" >
+      <input class="searchButton" value="Search" type="submit">
+    </form>
+</div>*/
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
