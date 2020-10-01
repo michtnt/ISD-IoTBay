@@ -1,4 +1,4 @@
-# ISD-Staff-Management
+# UTS - ISD
 
 Introduction to Software Development Assignment 2
 
